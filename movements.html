@@ -677,10 +677,10 @@ var myChart = new Chart(ctx, {
         <script>
         // Function to make RPC call to retrieve current block height
         async function mnsGetCurrentBlockHeight() {
-            const response = await fetch('https://rpc.nosocoin.com:8078', {
+            const response = await fetch('https://api.nosostats.com:8078', {
                 method: 'POST',
                 headers: {
-                    'Origin': 'https://rpc.nosocoin.com',
+                    'Origin': 'https://api.nosostats.com',
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
@@ -701,10 +701,10 @@ var myChart = new Chart(ctx, {
 
         // Function to fetch block information
         async function mnsFetchBlockInfo(blockHeight) {
-            const response = await fetch('https://rpc.nosocoin.com:8078', {
+            const response = await fetch('https://api.nosostats.com:8078', {
                 method: 'POST',
                 headers: {
-                    'Origin': 'https://rpc.nosocoin.com',
+                    'Origin': 'https://api.nosostats.com',
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({

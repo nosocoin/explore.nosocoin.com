@@ -1,10 +1,10 @@
 // Get the order ID from the URL parameters
 const urlParams = new URLSearchParams(window.location.search);
 const orderId = urlParams.get('orderid');
-fetch('https://rpc.nosocoin.com:8078', {
+fetch('https://api.nosostats.com:8078', {
   method: 'POST',
   headers: {
-    'Origin': 'http://rpc.nosocoin.com'
+    'Origin': 'http://api.nosostats.com'
   },
   body: JSON.stringify({
     "jsonrpc": "2.0",

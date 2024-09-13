@@ -1,7 +1,7 @@
-fetch('http://rpc.nosocoin.com:8078', {
+fetch('http://api.nosostats.com:8078', {
   method: 'POST',
   headers: {
-    'Origin': 'http://rpc.nosocoin.com'
+    'Origin': 'http://api.nosostats.com'
   },
   body: JSON.stringify({
     "jsonrpc": "2.0",

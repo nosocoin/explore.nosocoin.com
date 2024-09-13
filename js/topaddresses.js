@@ -11,9 +11,9 @@ function calculatePercentage(balance, circulatingSupply) {
 
 // Main function to populate table and perform calculations
 async function populateTable() {
-  const richlistUrl = 'https://api.nosocoin.com/address/richlist';
-  const circulatingSupplyUrl = 'https://api.nosocoin.com/info/circulating_supply';
-  const lockedSupplyUrl = 'https://api.nosocoin.com/info/locked_supply';
+  const richlistUrl = 'https://api.nosocoin.org/address/richlist';
+  const circulatingSupplyUrl = 'https://api.nosocoin.org/info/circulating_supply';
+  const lockedSupplyUrl = 'https://api.nosocoin.org/info/locked_supply';
 
   const richlistData = await fetchData(richlistUrl);
   const circulatingSupplyData = await fetchData(circulatingSupplyUrl);
