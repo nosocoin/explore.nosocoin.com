@@ -4,7 +4,7 @@ function parseBlockHeightFromURL() {
   return parseInt(urlParams.get('blockheight'));
 }
 
-// Function to make RPC call to retrieve current block height
+// Function to make RPC call to retrieve current blockheight
 async function getCurrentBlockHeight() {
   const response = await fetch('https://api.nosostats.com:8078', {
     method: 'POST',
