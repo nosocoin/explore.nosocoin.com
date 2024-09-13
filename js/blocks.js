@@ -6,10 +6,10 @@ function parseBlockHeightFromURL() {
 
 // Function to make RPC call to retrieve current block height
 async function getCurrentBlockHeight() {
-  const response = await fetch('https://rpc.nosocoin.org:8078', {
+  const response = await fetch('https://api.nosocoin.org:8078', {
     method: 'POST',
     headers: {
-      'Origin': 'https://rpc.nosocoin.org'
+      'Origin': 'https://api.nosocoin.org'
     },
     body: JSON.stringify({
       "jsonrpc": "2.0",
@@ -29,10 +29,10 @@ async function getCurrentBlockHeight() {
 
 // Function to fetch block information
 async function fetchBlockInfo(blockHeight) {
-  const response = await fetch('https://rpc.nosocoin.org:8078', {
+  const response = await fetch('https://api.nosocoin.org:8078', {
     method: 'POST',
     headers: {
-      'Origin': 'https://rpc.nosocoin.org'
+      'Origin': 'https://api.nosocoin.org'
     },
     body: JSON.stringify({
       "jsonrpc": "2.0",
