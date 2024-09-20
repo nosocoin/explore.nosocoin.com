@@ -1,6 +1,6 @@
 async function fetchNosoUsdtPrice() {
   try {
-    const response = await fetch("https://api.nosocoin.org/info/price?range=day&interval=1");
+    const response = await fetch("https://api.nosocoin.com/info/price?range=day&interval=1");
     if (response.ok) {
       const data = await response.json();
       return data[0].price; // Assuming the first element contains the latest price
@@ -58,7 +58,7 @@ if (nosoUsdtPrice !== null) {
 // Function to make the API call and update the DOM for mn-lock-funds
 async function fetchLockFunds() {
   try {
-    const response = await fetch('https://api.nosocoin.org/info/locked_supply');
+    const response = await fetch('https://api.nosocoin.com/info/locked_supply');
     const mnLockFunds = await response.text();
 
     if (!isNaN(mnLockFunds)) {
@@ -116,10 +116,10 @@ async function fetchDataForBlockHeight(blockHeight) {
     // Subtract 1 from the blockHeight
     blockHeight -= 1;
 
-    const response = await fetch('https://api.nosostats.com:8078', {
+    const response = await fetch('https://rpc.nosocoin.com:8078', {
       method: 'POST',
       headers: {
-        'Origin': 'https://api.nosostats.com'
+        'Origin': 'https://rpc.nosocoin.com'
       },
       body: JSON.stringify({
         "jsonrpc": "2.0",
@@ -182,10 +182,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Fetch the currentHeight if blockHeight is not available
   if (!blockHeight) {
-    fetch('https://api.nosostats.com:8078', {
+    fetch('https://rpc.nosocoin.com:8078', {
       method: 'POST',
       headers: {
-        'Origin': 'https://api.nosostats.com'
+        'Origin': 'https://rpc.nosocoin.com'
       },
       body: JSON.stringify({
         "jsonrpc": "2.0",

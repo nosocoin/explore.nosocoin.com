@@ -5,10 +5,10 @@
         
         // Function to fetch last block number
         async function fetchLastBlockNumber() {
-            const response = await fetch('https://api.nosostats.com:8078', {
+            const response = await fetch('https://rpc.nosocoin.com:8078', {
                 method: 'POST',
                 headers: {
-                    'Origin': 'https://api.nosostats.com'
+                    'Origin': 'https://rpc.nosocoin.com'
                 },
                 body: JSON.stringify({
                     "jsonrpc": "2.0",
@@ -31,10 +31,10 @@
 
         // Function to fetch block information
         async function fetchBlockOrders(blockHeight) {
-            const response = await fetch('https://api.nosostats.com:8078', {
+            const response = await fetch('https://rpc.nosocoin.com:8078', {
                 method: 'POST',
                 headers: {
-                    'Origin': 'https://api.nosostats.com'
+                    'Origin': 'https://rpc.nosocoin.com'
                 },
                 body: JSON.stringify({
                     "jsonrpc": "2.0",

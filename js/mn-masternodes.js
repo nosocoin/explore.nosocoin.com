@@ -3,7 +3,7 @@
         });
 
         function fetchData() {
-            const lockedMnsPromise = fetch('https://api.nosostats.com:8078', {
+            const lockedMnsPromise = fetch('https://rpc.nosocoin.com:8078', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -16,7 +16,7 @@
                 })
             }).then(response => response.json());
 
-            const masternodesPromise = fetch('https://api.nosostats.com:8078', {
+            const masternodesPromise = fetch('https://rpc.nosocoin.com:8078', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

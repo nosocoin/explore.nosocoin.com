@@ -1,9 +1,9 @@
 // Function to make RPC call to retrieve current block height and pending transactions
 async function getCurrentBlockInfo() {
-  const response = await fetch('https://api.nosostats.com:8078', {
+  const response = await fetch('https://rpc.nosocoin.com:8078', {
     method: 'POST',
     headers: {
-      'Origin': 'https://api.nosostats.com'
+      'Origin': 'https://rpc.nosocoin.com'
     },
     body: JSON.stringify({
       "jsonrpc": "2.0",
@@ -54,10 +54,10 @@ async function fetchBlockOrdersForLast144Blocks() {
 
 // Function to fetch block orders
 async function fetchBlockOrders(blockHeight) {
-  const response = await fetch('https://api.nosostats.com:8078', {
+  const response = await fetch('https://rpc.nosocoin.com:8078', {
     method: 'POST',
     headers: {
-      'Origin': 'https://api.nosostats.com'
+      'Origin': 'https://rpc.nosocoin.com'
     },
     body: JSON.stringify({
       "jsonrpc": "2.0",

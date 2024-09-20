@@ -10,7 +10,7 @@ $(document).ready(function () {
         const tableBody = $('#api-table-body');
 
         function makeApiRequest(offsetVal) {
-            const apiUrl = 'https://api.nosocoin.org/transactions/history?address=' + inputVal + '&limit=' + limitVal + '&offset=' + offsetVal;
+            const apiUrl = 'https://api.nosocoin.com/transactions/history?address=' + inputVal + '&limit=' + limitVal + '&offset=' + offsetVal;
 
             loader.show();
             tableBody.html('');

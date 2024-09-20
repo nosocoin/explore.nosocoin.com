@@ -1,6 +1,6 @@
 async function fetchNosoCoinData() {
   try {
-    const response = await fetch("https://api.nosocoin.org/info/price?range=day&interval=1");
+    const response = await fetch("https://api.nosocoin.com/info/price?range=day&interval=1");
 
     if (response.ok) {
       const result = await response.json();
